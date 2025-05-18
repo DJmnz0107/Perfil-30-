@@ -52,7 +52,7 @@ movieController.updateMovie = async (req, res) => {
             duracion,
             imagen: imageUrl || undefined // Si hay una imagen, se actualiza, sino, no se toca
         },
-        { new: true } // Retorna el documento actualizado
+        { new: true } 
     );
 
     res.json({ message: "Movie updated", movie: updatedMovie });

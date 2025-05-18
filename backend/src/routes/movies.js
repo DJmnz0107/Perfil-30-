@@ -10,8 +10,9 @@ const upload = multer({dest: "public/"})
 
 router.route("/")
 .get(moviesController.getMovies)
-.post (upload.single("image"), moviesController.insertMovie)
-router.route("/:id").put(upload.single("image"), moviesController.updateMovie)
+.post (upload.single("imagen"), moviesController.insertMovie)
+router.route("/:id").put(upload.single("imagen"), moviesController.updateMovie)
+.delete(moviesController.deleteMovie)
 
 
 

@@ -7,7 +7,6 @@ registerClientsController.register = async (req, res) => {
     // Obtener los datos del cliente desde el cuerpo de la solicitud
     const { nombre, correo, contrasena, telefono, direccion, DUI } = req.body;
 
-    // Validación de entrada
     if (!nombre || !correo || !contrasena || !telefono || !direccion || !DUI) {
         return res.status(400).json({ message: "All fields are required" });
     }
